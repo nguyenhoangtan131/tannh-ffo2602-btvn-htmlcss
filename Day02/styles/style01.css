@@ -11,12 +11,21 @@ body {
   background-color: #eef2f9;
 }
 
-.product {
+.w-100 {
   width: 100%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.product {
   max-width: 450px;
   padding: 3rem;
-  background-color: white;
-  display: flex;
   border-radius: 12px;
   justify-content: center;
   gap: 1rem;
@@ -24,57 +33,57 @@ body {
 
 .product-imgs {
   flex: 0 1 30%;
+  aspect-ratio: 1/1;
   align-self: flex-start;
-  display: flex;
   justify-content: center;
-}
 
-.product-imgs img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  & img {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .product-content {
-  display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  & .product-label {
+    width: fit-content;
+    padding: 0.25rem;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 0.75rem;
+  }
+
+  & .product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    max-width: 18.75rem;
+    line-height: 1.5;
+  }
+
+  & .price-group {
+    margin: 1rem 0rem;
+
+    & .old-price {
+      text-decoration: line-through;
+      font-size: 0.8rem;
+    }
+
+    & .price {
+      font-size: 2rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    & .price-desc {
+      font-size: 0.6rem;
+      font-weight: 200;
+    }
+  }
 }
 
-.product-label {
-  width: fit-content;
-  padding: 0.25rem;
-  border-radius: 20px;
-  background-color: black;
-  color: white;
-  font-size: 0.75rem;
-}
-
-.product-title {
-  font-size: 1rem;
-  font-weight: 600;
-  max-width: 18.75rem;
-  line-height: 1.5;
-}
-
-.price-group {
-  margin: 1rem 0rem;
-}
-
-.old-price {
-  text-decoration: line-through;
-  font-size: 0.8rem;
-}
-
-.price {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.price-desc {
-  font-size: 0.6rem;
-  font-weight: 200;
-}
 .btn-primary {
   background-color: #4788e9;
   color: white;
@@ -102,14 +111,25 @@ body {
 }
 
 .btn-group {
-  display: flex;
   gap: 0.8rem;
 }
 
 .btn-secondary {
-  width: 100%;
   padding: 0.7rem 0rem;
-  background-color: white;
   border-radius: 0.3rem;
   border: 1.5px solid #d1d5db;
+}
+
+.hover-effect {
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: #4788e988;
+  box-shadow: 0 0.25rem 0 #4788e988;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
 }

@@ -23,7 +23,7 @@ body {
 }
 
 .product-imgs {
-  flex: 0 0 30%;
+  flex: 0 1 30%;
   align-self: flex-start;
   display: flex;
   justify-content: center;

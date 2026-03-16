@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
+    <link rel="stylesheet" href="../styles/style03.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,120 +14,114 @@
     />
   </head>
   <body>
-    <div class="gallery">
-      <div class="gallery-title">
-        <h2>Popular Collections</h2>
-        <ul class="gallery-tag-list">
-          <li class="gallery-tag-item">Profile</li>
-          <li class="gallery-tags-item">New York</li>
-          <li class="gallery-tags-item">Relaxing</li>
-          <li class="gallery-tags-item">Person</li>
-          <li class="gallery-tags-item">Fashion</li>
+    <div class="gallery w-80">
+      <div class="title-container display-flex">
+        <h1>Popular Collections</h1>
+        <ul class="gallery-tag-list display-flex flex-between">
+          <li>Profile</li>
+          <li>New York</li>
+          <li>Relaxing</li>
+          <li>Person</li>
+          <li>Fashion</li>
         </ul>
       </div>
-      <div class="gallery-body">
-        <ul>
-          <li class="album-group">
-            <div class="album-cover">
+      <ul class="gallery-body w-100">
+        <li>
+          <div class="main-cover">
+            <img
+              src="../imgs/task01_2/gallery_1/maincover_1.jpg"
+              alt="Ảnh bìa chính"
+            />
+          </div>
+          <ul class="sub-cover-list">
+            <li>
               <img
-                src="../imgs/task01_2/gallery_1/maincover_1.jpg"
-                alt="Ảnh bìa chính"
+                src="../imgs/task01_2/gallery_1/sub_cover_1.png"
+                alt="Ảnh phụ 1"
               />
-              <ul class="sub-cover-list">
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_1.png"
-                    alt="Ảnh phụ 1"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_2.png"
-                    alt="Ảnh phụ 2"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_3.png"
-                    alt="Ảnh phụ 3"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div class="album-decs">
-              <p>People</p>
-              <i class="fa-regular fa-image"></i>
-              144
-            </div>
-          </li>
-          <li class="album-group">
-            <div class="album-cover">
+            </li>
+            <li>
               <img
-                src="../imgs/task01_2/gallery_1/maincover_1.jpg"
-                alt="Ảnh bìa chính"
+                src="../imgs/task01_2/gallery_1/sub_cover_2.png"
+                alt="Ảnh phụ 2"
               />
-              <ul class="sub-cover-list">
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_1.png"
-                    alt="Ảnh phụ 1"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_2.png"
-                    alt="Ảnh phụ 2"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_3.png"
-                    alt="Ảnh phụ 3"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div class="album-decs">
-              <p>People</p>
-              <i class="fa-regular fa-image"></i>
-              144
-            </div>
-          </li>
-          <li class="album-group">
-            <div class="album-cover">
+            </li>
+            <li>
               <img
-                src="../imgs/task01_2/gallery_1/maincover_1.jpg"
-                alt="Ảnh bìa chính"
+                src="../imgs/task01_2/gallery_1/sub_cover_3.png"
+                alt="Ảnh phụ 3"
               />
-              <ul class="sub-cover-list">
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_1.png"
-                    alt="Ảnh phụ 1"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_2.png"
-                    alt="Ảnh phụ 2"
-                  />
-                </li>
-                <li class="sub-cover-item">
-                  <img
-                    src="../imgs/task01_2/gallery_1/sub_cover_3.png"
-                    alt="Ảnh phụ 3"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div class="album-decs">
-              <p>People</p>
+            </li>
+          </ul>
+          <div class="album-desc">
+            <span>People</span>
+            <div class="photo-count">
               <i class="fa-regular fa-image"></i>
-              144
+              <span class="count-span">144</span>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="main-cover">
+            <img src="https://picsum.photos/536/354" alt="Ảnh bìa chính" />
+          </div>
+          <ul class="sub-cover-list">
+            <li>
+              <img src="https://picsum.photos/536/354" alt="Ảnh phụ 1" />
+            </li>
+            <li>
+              <img src="https://picsum.photos/536/354" alt="Ảnh phụ 2" />
+            </li>
+            <li>
+              <img src="https://picsum.photos/536/354" alt="Ảnh phụ 3" />
+            </li>
+          </ul>
+          <div class="album-desc">
+            <span>People</span>
+            <div class="photo-count">
+              <i class="fa-regular fa-image"></i>
+              <span class="count-span">144</span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="main-cover">
+            <img
+              src="../imgs/task01_2/gallery_1/maincover_1.jpg"
+              alt="Ảnh bìa chính"
+            />
+          </div>
+          <ul class="sub-cover-list">
+            <li>
+              <img
+                src="../imgs/task01_2/gallery_1/sub_cover_1.png"
+                alt="Ảnh phụ 1"
+              />
+            </li>
+            <li>
+              <img
+                src="../imgs/task01_2/gallery_1/sub_cover_2.png"
+                alt="Ảnh phụ 2"
+              />
+            </li>
+            <li>
+              <img
+                src="../imgs/task01_2/gallery_1/sub_cover_3.png"
+                alt="Ảnh phụ 3"
+              />
+            </li>
+          </ul>
+          <div class="album-desc">
+            <span>People</span>
+            <div class="photo-count">
+              <i class="fa-regular fa-image"></i>
+              <span class="count-span">144</span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wh-0 {
+        width: 0;
+        height: 0;
+      }
+
+      .w-50-h-100-red {
+        width: 50px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .border-red {
+        border: 50px solid red;
+      }
+
+      .flex-start {
+        display: flex;
+        justify-items: flex-start;
+      }
+
+      .border-25 {
+        border: 25px solid red;
+      }
+
+      .trans-left {
+        border-left-color: transparent;
+      }
+
+      .trans-right {
+        border-right-color: transparent;
+      }
+
+      .trans-top {
+        border-top-color: transparent;
+      }
+
+      .trans-bottom {
+        border-bottom-color: transparent;
+      }
+
+      .shape-04-right-01 {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+      }
+      .shape-04-right-02 {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shape-2 wh-0 border-red trans-left trans-right"></div>
+    <div>
+      <div
+        class="top-half-01 wh-0 border-red trans-left trans-right trans-top"
+      ></div>
+      <div
+        class="bottom-half-01 wh-0 border-red trans-left trans-right trans-bottom"
+      ></div>
+    </div>
+
+    <div class="shape-3 flex-start">
+      <div class="wh-0 border-red"></div>
+      <div>
+        <div class="wh-0 border-25 trans-right trans-top"></div>
+        <div class="wh-0 border-25 trans-right trans-bottom"></div>
+      </div>
+    </div>
+
+    <div class="shape-4 wh-0 flex-start">
+      <div class="flex-start">
+        <div class="w-50-h-100-red"></div>
+        <div class="shape-04-right-01 w-50-h-100-red"></div>
+      </div>
+
+      <div class="flex-start">
+        <div class="shape-04-right-02 w-50-h-100-red"></div>
+        <div class="w-50-h-100-red"></div>
+      </div>
+    </div>
+  </body>
+</html>

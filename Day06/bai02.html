@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background-color: greenyellow;
+      }
+
+      .shape {
+        width: 0px;
+        height: 0px;
+        border: 40px solid red;
+        border-radius: 40px;
+        position: absolute;
+        opacity: 0.7;
+      }
+
+      .round-2 {
+        right: 0;
+        top: 0;
+      }
+      .round-3 {
+        bottom: 0;
+        left: 0px;
+      }
+      .round-4 {
+        bottom: 0;
+        right: 0;
+      }
+      .round-5 {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="round-1 shape"></div>
+      <div class="round-2 shape"></div>
+      <div class="round-3 shape"></div>
+      <div class="round-4 shape"></div>
+      <div class="round-5 shape"></div>
+    </div>
+  </body>
+</html>

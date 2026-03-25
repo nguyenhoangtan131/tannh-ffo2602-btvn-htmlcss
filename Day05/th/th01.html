@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài tập CSS Selector & Units</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+      }
+
+      .margin-bottom {
+        margin-bottom: 1rem;
+      }
+
+      .wrapper {
+        padding: 2rem 4rem 2rem 8rem;
+      }
+
+      .main-title {
+        margin-bottom: 1.9rem;
+        font-weight: 800;
+      }
+
+      .notify-box {
+        padding: 2rem;
+        border: 1px solid var(--theme-color);
+        border-radius: 12px;
+      }
+
+      .status-urgent {
+        --theme-color: #e5484d;
+      }
+
+      .status-info {
+        --theme-color: #3e9ad8;
+      }
+
+      .status-promo {
+        --theme-color: #f59e0b;
+      }
+
+      .notify-box > .label {
+        color: var(--theme-color);
+        text-transform: uppercase;
+      }
+
+      .notify-box > .box-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .notify-box > .box-detail {
+        font-size: 1rem;
+      }
+
+      .notify-box > .btn-detail {
+        background: var(--theme-color);
+        border-style: none;
+        color: white;
+        padding: 10px 20px;
+      }
+
+      .notify-box > .btn-detail:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      .notify-box:first-child > .btn-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .notify-box + .notify-box {
+        margin-top: 1.5rem;
+      }
+
+      .label {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      .box-title {
+        margin-bottom: 1rem;
+      }
+      .box-desc {
+        margin-bottom: 1rem;
+      }
+
+      .label {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1 class="main-title">System Notifications</h1>
+
+      <section class="notification-list">
+        <article class="notify-box status-urgent">
+          <strong class="label">Urgent</strong>
+          <h2 class="box-title">Server Connection Error</h2>
+          <p class="box-desc">
+            The main server is undergoing emergency maintenance. Please try
+            again later.
+          </p>
+          <button class="btn-detail" type="button">View Details</button>
+        </article>
+
+        <article class="notify-box status-info">
+          <strong class="label">New Update</strong>
+          <h2 class="box-title">Feature Update 2.0</h2>
+          <p class="box-desc">
+            Version 2.0 is now live with significant improvements to the user
+            interface.
+          </p>
+          <button class="btn-detail" type="button">View Details</button>
+        </article>
+
+        <article class="notify-box status-promo">
+          <strong class="label">Promotion</strong>
+          <h2 class="box-title">Summer Sale</h2>
+          <p class="box-desc">
+            Use code SUMMER50 to get a 50% discount on all premium courses.
+          </p>
+          <button class="btn-detail" type="button">View Details</button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

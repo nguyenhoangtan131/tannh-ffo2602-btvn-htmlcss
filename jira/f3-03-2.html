@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-color: #f3f6ff;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3f6ff;
+        font-family: "Merriweather", sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1054px;
+        & h1 {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 4.5rem;
+          font-weight: 900;
+        }
+
+        .position-list {
+          display: flex;
+          list-style: none;
+          flex-wrap: wrap;
+          gap: 2rem;
+          .position {
+            max-width: 330px;
+            padding: 3rem 2.5rem;
+            background: #fff;
+            border-radius: 16px;
+            font-family: "Poppins";
+            box-shadow: 0 4px 15px rgba(6, 6, 225, 0.08);
+          }
+        }
+
+        .position .title-position {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+          gap: 1rem;
+
+          font-size: 1.5rem;
+          font-weight: 400;
+
+          & img {
+            width: 100%;
+            width: 64px;
+            height: 64px;
+            flex: 0 0 64px;
+          }
+        }
+        .position .position-description {
+          font-size: 1.125rem;
+          padding: 1rem 3.1rem;
+          border: 1px solid #c2c5e2;
+          border-radius: 8px;
+        }
+
+        .position-description:hover {
+          color: #fff;
+          background-color: #1e2246;
+        }
+
+        .long-description {
+          width: 100%; /* Để nó chiếm hết chiều ngang container */
+          max-width: 845px; /* Giới hạn độ rộng tối đa theo thiết kế */
+          margin: 3.8125rem auto 0; /* Căn giữa bằng auto (Trên 4.5rem, Trái/Phải auto, Dưới 0) */
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1>Open positions</h1>
+        <ul class="position-list">
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 1.png" alt="alt-img-desc" />
+              <p>Design</p>
+            </div>
+            <div class="position-description">4 open positions</div>
+          </li>
+
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 2.png" alt="alt-img-desc" />
+              <p>Engineering</p>
+            </div>
+            <div class="position-description">8 open positions</div>
+          </li>
+
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 3.png" alt="alt-img-desc" />
+              <p>Operations</p>
+            </div>
+            <div class="position-description">2 open positions</div>
+          </li>
+
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 4.png" alt="alt-img-desc" />
+              <p>People</p>
+            </div>
+            <div class="position-description">6 open positions</div>
+          </li>
+
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 5.png" alt="alt-img-desc" />
+              <p>Sales</p>
+            </div>
+            <div class="position-description">7 open positions</div>
+          </li>
+
+          <li class="position">
+            <div class="title-position">
+              <img src="./f3-03-02-imgs/Frame 1.png" alt="alt-img-desc" />
+              <p>University</p>
+            </div>
+            <div class="position-description">8 open positions</div>
+          </li>
+        </ul>
+        <p class="long-description">
+          We are proud to be an equal opportunity employer that values deversity
+          . We do not discriminate on the basis of race, religion, color,
+          national origin, gender, sexual orientation, age, martial status,
+          veteran statu, or disability status
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

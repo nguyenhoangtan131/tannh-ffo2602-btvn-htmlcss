@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="./public/css/bai1.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <title>Bai 1</title>
+    <title>Navigation</title>
     <style>
       * {
         margin: 0px;
@@ -42,36 +41,109 @@
         --theme-color: #000000c5;
       }
       .container {
+        margin-top: 1rem;
         position: fixed;
-      }
-      .navbar-container {
-        width: 1225px;
-        padding: 1rem;
-        background: #fff;
-        border-radius: 24px;
+
+        .navbar-container {
+          width: 1225px;
+          padding: 1rem;
+          background: #fff;
+          border-radius: 24px;
+
+          .navbar-main {
+            display: flex;
+            background: #f8f9ff;
+            border-radius: 1.5rem;
+            justify-content: space-between;
+            padding: 2.8rem 2.5rem;
+          }
+        }
       }
 
-      .navbar-main {
-        display: flex;
-        background: #f8f9ff;
-        border-radius: 1.5rem;
-        justify-content: space-between;
-        padding: 2.8rem 2.5rem;
-      }
-
-      .nav-links {
+      .navbar-main .nav-links {
         display: flex;
         justify-content: space-between;
         list-style: none;
+
+        .nav-item {
+          position: relative;
+          padding: 1.25rem 1.5rem;
+        }
+
+        .nav-item:hover {
+          border-radius: 20px;
+          background: var(--theme-color);
+        }
       }
 
-      .nav-item {
-        padding: 1.25rem 1.5rem;
+      .nav-links .mega-menu {
+        width: 100%;
+        min-width: 389px;
+        min-height: 333px;
+        position: absolute;
+        margin-top: 0.5rem;
+        left: 0;
+        display: none;
+        background: #fff;
+        padding: 2rem 1.875rem 1.75rem 2.1875rem;
+        border-radius: 15px;
+
+        .menu-column {
+          .column-title {
+            font-size: 1rem;
+            font-weight: 900;
+          }
+
+          .menu-list {
+            list-style: none;
+            gap: 1.5625rem;
+            a {
+              text-decoration: none;
+              color: #000;
+              font-weight: 18px;
+              font-weight: 700;
+            }
+          }
+
+          .menu-list li {
+            position: relative;
+            padding: 0.75rem 0 0.6875rem 0;
+            width: 100%;
+            min-width: 156px;
+            z-index: 1;
+          }
+          .menu-list li a {
+            display: block;
+          }
+
+          .menu-list li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            bottom: 0;
+            background-color: var(--theme-color);
+            border-radius: 5px;
+            z-index: -1;
+            opacity: 0;
+          }
+
+          .menu-list li:hover::before {
+            opacity: 1;
+            right: 0.9375rem;
+          }
+
+          .menu-list li a {
+            position: relative;
+            z-index: 1;
+          }
+        }
       }
 
-      .nav-item:hover {
-        border-radius: 20px;
-        background: var(--theme-color);
+      .nav-item:hover .mega-menu {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2.1875rem;
       }
 
       .nav-link,
@@ -83,7 +155,7 @@
         font-weight: bold;
       }
 
-      .nav-actions {
+      .navbar-main .nav-actions {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -101,43 +173,6 @@
         cursor: pointer;
         background-color: var(--theme-color);
       }
-
-      .nav-item.active {
-        position: relative;
-      }
-
-      .mega-menu {
-        width: 389px;
-        height: 333px;
-        position: absolute;
-        left: 0;
-        display: none;
-        background: #fff;
-        padding: 2rem;
-        border-radius: 15px;
-      }
-
-      .nav-item.active:hover .mega-menu {
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .menu-column {
-        .column-title {
-          font-size: 1rem;
-          font-weight: 900;
-        }
-
-        .menu-list {
-          list-style: none;
-          a {
-            text-decoration: none;
-            color: #000;
-            font-weight: 18px;
-            font-weight: 700;
-          }
-        }
-      }
     </style>
   </head>
 
@@ -148,11 +183,57 @@
           <ul class="nav-links">
             <li class="nav-item purple-color-on-hover">
               <a href="#" class="nav-link">Framework</a>
+
+              <div class="mega-menu">
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Chart</a></li>
+                    <li><a href="#">Controls</a></li>
+                    <li><a href="#">Financial Chart</a></li>
+                  </ul>
+                </div>
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Knowledge Base</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Licensing</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="nav-item purple-color-on-hover">
               <a href="#" class="nav-link">Demos</a>
+
+              <div class="mega-menu">
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Chart</a></li>
+                    <li><a href="#">Controls</a></li>
+                    <li><a href="#">Financial Chart</a></li>
+                  </ul>
+                </div>
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Knowledge Base</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Licensing</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="nav-item active purple-color-on-hover">
+            <li class="nav-item purple-color-on-hover">
               <a href="#" class="nav-link">Resources</a>
 
               <div class="mega-menu">
@@ -180,6 +261,29 @@
             </li>
             <li class="nav-item purple-color-on-hover">
               <a href="#" class="nav-link">Documentation</a>
+
+              <div class="mega-menu">
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Chart</a></li>
+                    <li><a href="#">Controls</a></li>
+                    <li><a href="#">Financial Chart</a></li>
+                  </ul>
+                </div>
+                <div class="menu-column">
+                  <span class="column-title">Top Controls</span>
+                  <ul class="menu-list">
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Knowledge Base</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Licensing</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
           <div class="nav-actions">

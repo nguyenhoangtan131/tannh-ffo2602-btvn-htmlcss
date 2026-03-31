@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job-labels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f7f4ff;
+        color: #281a51;
+        font-family: "Poppins";
+      }
+      :root {
+        --main-container-color: #ffffff;
+        --btn-use-map-color: #281a51;
+        --label-1-color: #ffecec;
+        --label-2-color: #f7ecff;
+        --label-3-color: #ecf0ff;
+        --label-4-color: #d7f9f3;
+        --label-5-color: #e2ffd4;
+        --label-6-color: #fff;
+        --label-7-color: #fff3c9;
+        --label-8-color: #ffd9c9;
+
+        --border-24: 24px;
+        --border-16: 16px;
+        --border-8: 8px;
+
+        --pading-72: 4.5rem;
+        --pading-24: 1.5rem;
+        --pading-16: 1rem;
+      }
+
+      .main-container {
+        background-color: var(--main-container-color);
+        border-radius: var(--border-24);
+        padding: var(--pading-72);
+      }
+      .search-label-container {
+        width: 496px;
+      }
+      .search-container {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+
+        .search-wrapper {
+          width: 100%;
+          display: block;
+          border-radius: 0.25rem;
+          outline: none;
+          padding: var(--pading-16);
+          align-items: center;
+          border: 1px solid rgb(212, 205, 205);
+
+          & input {
+            border: none;
+            outline: none;
+          }
+        }
+
+        .button-wrapper {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.291875rem;
+          border-radius: 4px;
+          padding: var(--pading-16);
+          background: var(--btn-use-map-color);
+
+          & p {
+            color: #fff;
+            font-size: 16;
+          }
+        }
+      }
+
+      .label-wrapper {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        flex-wrap: wrap;
+
+        & li {
+          display: flex;
+          width: 112px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: var(--pading-24);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background-container"></div>
+      <div class="main-container">
+        <div class="search-label-container">
+          <div class="search-container">
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" placeholder="Search for a part-time job" />
+            </div>
+            <button class="button-wrapper">
+              <img src="./kiemtra/kiem_tra_img/Frame(7).png" alt="" />
+              <p>Use map</p>
+            </button>
+          </div>
+          <ul class="label-wrapper">
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame.png" alt="" />
+              <p href="job-label">Furniture</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(1).png" alt="" />
+              <p href="job-label">Property</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(2).png" alt="" />
+              <p href="job-label">Job</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(6).png" alt="" />
+              <p href="job-label">Travel</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(3).png" alt="" />
+              <p href="job-label">Boat</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(4).png" alt="" />
+              <p href="job-label">MC</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame(5).png" alt="" />
+              <p href="job-label">Economy</p>
+            </li>
+            <li>
+              <img src="./kiemtra/kiem_tra_img/Frame.png" alt="" />
+              <p href="job-label">Holiday</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

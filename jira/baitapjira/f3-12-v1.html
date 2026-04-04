@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      a {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-size: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      :root {
+        --bg-color: #abaea8;
+        --main-color: #e8e1da;
+        --text-color: black;
+        --under-line-color-effect: #1f1d2a;
+        --title-color: #fff;
+        --border-6: 6px;
+        --border-20: 20px;
+      }
+      .flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-flex-start {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .no-style {
+        text-decoration: none;
+        list-style: none;
+      }
+
+      p {
+        font-size: inherit;
+      }
+
+      w-100 {
+        width: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        font-size: 1rem;
+        font-family: "Poppins";
+        color: var(--text-color);
+        background-color: var(--bg-color);
+      }
+
+      .container {
+        position: relative;
+        margin: 0 auto;
+        display: grid;
+        padding: 2.5rem 7.5rem 6.25rem 7.5rem;
+        width: 1512px;
+        grid-template-areas:
+          "navigation" "hero-section-1" "certificate" "quote"
+          "person-card-list";
+        grid-template-rows: auto auto auto auto auto;
+        background-color: var(--main-color);
+
+        & > img {
+          transform: rotate(8deg);
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          left: 90px;
+          pointer-events: none;
+        }
+      }
+
+      .navigation {
+        width: 100%;
+        max-width: 1272px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7rem;
+        & > a {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+
+        .sign-in-btn {
+          padding: 0.625rem 1.5rem;
+          border: 1px solid #1f1d2a;
+          border-radius: var(--border-6);
+          background-color: transparent;
+          white-space: nowrap;
+
+          &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+
+      .action-group {
+        gap: 3.2rem;
+        & li a {
+          position: relative;
+          &:hover::after,
+          &.active::after {
+            content: "";
+            position: absolute;
+            font-weight: 500;
+            bottom: -8px;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background-color: var(--under-line-color-effect);
+            text-underline-offset: 0.5rem;
+          }
+        }
+      }
+
+      .hero-section-1 {
+        margin-bottom: 7rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+        gap: 5.0625rem;
+      }
+      .text-introduction {
+        display: flex;
+        flex-direction: column;
+        padding: 3.625rem 0px 3.875rem 0px;
+        & > h1 {
+          width: 100%;
+          max-width: 579px;
+          text-transform: capitalize;
+          font-size: 3.4375rem;
+          font-weight: 600;
+          margin-bottom: 2.125rem;
+        }
+
+        & p {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          max-width: 431px;
+          color: rgba(128, 128, 128, 0.589);
+          margin-bottom: 3.125rem;
+        }
+        .get-start-btn {
+          font-size: 1.25rem;
+          border: none;
+          border-radius: var(--border-6);
+          background-color: rgba(86, 189, 86, 0.694);
+          max-width: fit-content;
+          padding: 1.25rem 1rem;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(86, 189, 86, 0.393);
+          }
+        }
+      }
+
+      .illustration {
+        flex: 1 1 300px;
+        max-width: 500px;
+        position: relative;
+
+        & > img:nth-of-type(1) {
+          width: 100%;
+          height: auto;
+        }
+        & > img:nth-of-type(2) {
+          width: 100%;
+          max-width: 80px;
+          height: 80px;
+          padding: 1.75rem;
+          object-fit: contain;
+          border-radius: 80px 80px;
+          background-color: #9499b7;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 92%;
+          transform: translate(0%, -50%);
+        }
+      }
+      .rating-card {
+        position: absolute;
+        left: 4%;
+        bottom: 8%;
+        max-width: 180px;
+        background: #fff;
+        padding: 1.25rem 1.4375rem 1.375rem 1.5rem;
+        border-radius: var(--border-20);
+        & p:nth-child(1) {
+          font-weight: 500;
+          font-size: 0.875rem;
+        }
+
+        & p:nth-child(2) {
+          font-weight: 300;
+          font-size: 0.875rem;
+          margin-bottom: 1.1875rem;
+        }
+
+        & ul {
+          display: flex;
+          gap: 0.125rem;
+        }
+      }
+
+      .certificate {
+        width: 100%;
+        max-width: 763.73px;
+        flex-direction: column;
+        gap: 1.875rem;
+        margin: auto auto 6.25rem auto;
+
+        & > p {
+          font-weight: 500;
+        }
+      }
+
+      .certificate .company-list {
+        display: grid;
+        width: 100%;
+        height: 35px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3.75rem;
+
+        & li {
+          width: 100%;
+          & img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .quote {
+        width: 100%;
+        max-width: 282.5px;
+        gap: 0.625rem;
+        margin: auto auto 4.375rem auto;
+
+        & > p {
+          text-align: center;
+        }
+
+        & > p:nth-of-type(1) {
+          font-size: 1.125rem;
+          font-weight: 500;
+        }
+
+        & > p:nth-of-type(2) {
+          font-size: 2rem;
+          font-weight: 600;
+        }
+      }
+
+      .person-card-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.875rem;
+      }
+
+      .person-card {
+        & img {
+          display: block;
+        }
+        .person-description {
+          padding: 1.25rem;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background-color: #fff;
+
+          & p:nth-of-type(1) {
+            font-size: 1.25rem;
+            font-weight: 500;
+          }
+
+          & p:nth-of-type(2) {
+            color: #abaea8;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container w-100">
+      <img src="../jira-imgs/f3-12-imgs/icons/Group 16.png" alt="" />
+      <div class="navigation w-100">
+        <a href="#" class="no-style">Shanya</a>
+        <ul class="action-group flex-flex-start">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Browse</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Story</a></li>
+        </ul>
+        <button class="sign-in-btn">Sign in</button>
+      </div>
+
+      <div class="hero-section-1">
+        <div class="text-introduction w-100">
+          <h1>learn UI design from the real expert</h1>
+          <p>
+            Stop wasting time browsing around and start learning from our
+            designers for your better career
+          </p>
+          <button class="get-start-btn">Get started</button>
+        </div>
+
+        <div class="illustration">
+          <div class="rating-card w-100">
+            <p>Corelina Xo</p>
+            <p>UI Designer</p>
+            <ul class="rating">
+              <li>
+                <img
+                  src="../jira-imgs/f3-12-imgs/icons/Star 2.png"
+                  alt="alt-desc-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="../jira-imgs/f3-12-imgs/icons/Star 2.png"
+                  alt="alt-desc-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="../jira-imgs/f3-12-imgs/icons/Star 2.png"
+                  alt="alt-desc-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="../jira-imgs/f3-12-imgs/icons/Star 2.png"
+                  alt="alt-desc-icon"
+                />
+              </li>
+              <li>
+                <img
+                  src="../jira-imgs/f3-12-imgs/icons/Star 2.png"
+                  alt="alt-desc-icon"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <img src="../jira-imgs/f3-12-imgs/Group 5.png" alt="alt-desc-img" />
+          <img src="../jira-imgs/f3-12-imgs/icons/Polygon 1.png" alt="" />
+        </div>
+      </div>
+
+      <div class="certificate flex-center">
+        <p>Trusted by Global Companies</p>
+        <ul class="company-list">
+          <li>
+            <img src="../jira-imgs/f3-12-imgs/icons/apple-11 1.png" alt="" />
+          </li>
+          <li>
+            <img src="../jira-imgs/f3-12-imgs/icons/Group 13.png" alt="" />
+          </li>
+          <li>
+            <img src="../jira-imgs/f3-12-imgs/icons/slack-2 1.png" alt="" />
+          </li>
+          <li>
+            <img src="../jira-imgs/f3-12-imgs/icons/spotify-1 1.png" alt="" />
+          </li>
+          <li>
+            <img src="../jira-imgs/f3-12-imgs/icons/google-2015 1.png" alt="" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="quote">
+        <p>Grow today</p>
+        <p>Start your career</p>
+      </div>
+
+      <ul class="person-card-list">
+        <li class="person-card">
+          <img src="../jira-imgs/f3-12-imgs/Group 18.png" alt="alt-desc-img" />
+          <div class="person-description">
+            <p>Asiyah</p>
+            <p>I teach you how to start UX</p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img
+            src="../jira-imgs/f3-12-imgs/Group 18(1).png"
+            alt="alt-desc-img"
+          />
+          <div class="person-description">
+            <p>Angga</p>
+            <p>I teach you how to design test</p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img
+            src="../jira-imgs/f3-12-imgs/Group 18(2).png"
+            alt="alt-desc-img"
+          />
+          <div class="person-description">
+            <p>Mabdul</p>
+            <p>I teach you how to asses design</p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img
+            src="../jira-imgs/f3-12-imgs/Group 18(3).png"
+            alt="alt-desc-img"
+          />
+          <div class="person-description">
+            <p>Wo You</p>
+            <p>I teach you how to do icons</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

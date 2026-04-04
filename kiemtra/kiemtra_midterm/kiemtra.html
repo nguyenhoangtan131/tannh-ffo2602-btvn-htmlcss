@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job-labels</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
@@ -44,11 +53,26 @@
         --pading-16: 1rem;
       }
 
+      .background-container {
+        position: absolute;
+        width: 421px;
+        height: 613px;
+        border-radius: 31px;
+        background-color: #efebfd;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+
       .main-container {
+        z-index: 1;
+        position: relative;
         background-color: var(--main-container-color);
         border-radius: var(--border-24);
         padding: var(--pading-72);
       }
+
       .search-label-container {
         width: 496px;
       }
@@ -60,15 +84,23 @@
         gap: 0.75rem;
 
         .search-wrapper {
+          position: relative;
           width: 100%;
-          display: block;
           border-radius: 0.25rem;
           outline: none;
-          padding: var(--pading-16);
+          padding: 1rem;
           align-items: center;
           border: 1px solid rgb(212, 205, 205);
 
+          & i {
+            position: absolute;
+            left: 1rem;
+            pointer-events: none;
+          }
+
           & input {
+            width: 100%;
+            padding-left: 2rem;
             border: none;
             outline: none;
           }
@@ -85,14 +117,19 @@
 
           & p {
             color: #fff;
+            white-space: nowrap;
             font-size: 16;
           }
+        }
+
+        .button-wrapper:hover {
+          cursor: pointer;
+          background: #281a5195;
         }
       }
 
       .label-wrapper {
         width: 100%;
-        overflow: hidden;
         display: flex;
         gap: 1rem;
         list-style: none;
@@ -100,11 +137,54 @@
 
         & li {
           display: flex;
-          width: 112px;
+          width: 100%;
+          max-width: 112px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           padding: var(--pading-24);
+          border: 1px solid transparent;
+          border-radius: 8px;
+          gap: 0.25rem;
+          font-size: 16px;
+        }
+
+        & li:hover {
+          border: 1px solid rgb(202, 197, 197);
+          box-shadow: 0 12px 20px -8px rgba(139, 92, 246, 0.3);
+          z-index: 1;
+        }
+
+        & li:nth-child(1) {
+          background-color: var(--label-1-color);
+        }
+
+        & li:nth-child(2) {
+          background-color: var(--label-2-color);
+        }
+
+        & li:nth-child(3) {
+          background-color: var(--label-3-color);
+        }
+
+        & li:nth-child(4) {
+          background-color: var(--label-4-color);
+        }
+
+        & li:nth-child(5) {
+          background-color: var(--label-5-color);
+        }
+
+        & li:nth-child(6) {
+          background-color: var(--label-6-color);
+        }
+
+        & li:nth-child(7) {
+          background-color: var(--label-7-color);
+        }
+
+        & li:nth-child(8) {
+          background-color: var(--label-8-color);
         }
       }
     </style>
@@ -120,41 +200,41 @@
               <input type="search" placeholder="Search for a part-time job" />
             </div>
             <button class="button-wrapper">
-              <img src="./kiemtra/kiem_tra_img/Frame(7).png" alt="" />
+              <img src="../kiem_tra_img/Frame(7).png" alt="" />
               <p>Use map</p>
             </button>
           </div>
           <ul class="label-wrapper">
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame.png" alt="" />
+              <img src="../kiem_tra_img/Frame.png" alt="" />
               <p href="job-label">Furniture</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(1).png" alt="" />
+              <img src="../kiem_tra_img/Frame(1).png" alt="" />
               <p href="job-label">Property</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(2).png" alt="" />
+              <img src="../kiem_tra_img/Frame(2).png" alt="" />
               <p href="job-label">Job</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(6).png" alt="" />
+              <img src="../kiem_tra_img/Frame(6).png" alt="" />
               <p href="job-label">Travel</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(3).png" alt="" />
+              <img src="../kiem_tra_img/Frame(3).png" alt="" />
               <p href="job-label">Boat</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(4).png" alt="" />
+              <img src="../kiem_tra_img/Frame(4).png" alt="" />
               <p href="job-label">MC</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame(5).png" alt="" />
+              <img src="../kiem_tra_img/Frame(5).png" alt="" />
               <p href="job-label">Economy</p>
             </li>
             <li>
-              <img src="./kiemtra/kiem_tra_img/Frame.png" alt="" />
+              <img src="../kiem_tra_img/Frame.png" alt="" />
               <p href="job-label">Holiday</p>
             </li>
           </ul>

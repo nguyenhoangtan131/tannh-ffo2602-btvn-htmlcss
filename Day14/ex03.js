@@ -13,9 +13,12 @@ function calcTax(salary) {
     return 0;
   }
   if (salary <= 25000000) {
-    return salary / 10;
+    return salary / 5;
   }
   if (salary <= 50000000) {
+    return salary / 10;
+  }
+  if (salary <= 80000000) {
     return salary / 20;
   }
   if (salary > 80000000) {

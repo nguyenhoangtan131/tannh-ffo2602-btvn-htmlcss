@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn tailwind</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1fb6ff",
+              secondary: "#7e5bef",
+            },
+            spacing: {
+              128: "32rem",
+            },
+            fontFamily: {
+              sans: ["Graphik", "sans-serif"],
+            },
+          },
+        },
+        // Kích hoạt các plugin chính thức nếu cần
+        plugins: [
+          // tailwind.plugin.lineClamp,
+        ],
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        h1 {
+          @apply text-2xl font-bold;
+        }
+        table {
+          @apply border-collapse;
+        }
+      }
+
+      @layer components {
+        .btn {
+          @apply px-4 py-2 rounded-lg font-semibold transition-all bg-blue-700 rounded-md border-2 border-red-700 text-white font-bold;
+        }
+      }
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <form action="">
+      <label for="">Email</label>
+      <input type="text" placeholder="Email..." />
+    </form>
+    <button class="btn">Click me</button>
+  </body>
+</html>

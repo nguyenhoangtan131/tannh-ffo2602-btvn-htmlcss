@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        .box {
+          width: 500px;
+          height: 500px;
+          background-color: aqua;
+          transition: transform 0.5s ease-in-out;
+        }
+        &:hover {
+          .box-01 {
+            transform: translateX(-50px);
+          }
+          .box-02 {
+            transform: translateX(50px);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-01"></div>
+      <div class="box box-02"></div>
+    </div>
+  </body>
+</html>

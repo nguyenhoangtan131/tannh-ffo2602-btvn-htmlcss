@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrap {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: 100px;
+        img {
+          width: 100%;
+          max-width: 100%;
+          border-radius: 50%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .wrap-arrow {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+        animation: spin 3s linear infinite;
+      }
+
+      .arrow {
+        color: red;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(90deg);
+        }
+        to {
+          transform: rotate(450deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="./Untitled.jpg" alt="" />
+      <div class="wrap-arrow">
+        <p class="arrow">=></p>
+      </div>
+    </div>
+  </body>
+</html>

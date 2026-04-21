@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn tailwind</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#281A51",
+            },
+            spacing: {
+              128: "32rem",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+        // Kích hoạt các plugin chính thức nếu cần
+        plugins: [
+          // tailwind.plugin.lineClamp,
+        ],
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        h1 {
+          @apply text-2xl font-bold;
+        }
+        table {
+          @apply border-collapse;
+        }
+
+        body {
+          @apply min-h-screen flex items-center justify-center bg-[#F7F4FF];
+        }
+      }
+
+      @layer components {
+        .wrapper {
+          @apply relative w-[642px];
+        }
+        .decorated-bg {
+          @apply -z-10 bg-[#EFEBFD] w-[421px] h-[613px] absolute
+         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[32px];
+        }
+
+        .search-modal {
+          @apply p-[72px] bg-white rounded-3xl shadow-2xl;
+          form {
+            @apply flex gap-3;
+          }
+        }
+
+        .form-group {
+          @apply flex items-center gap-3 w-full p-5 border border-gray-300 rounded;
+
+          & input {
+            @apply w-full border-none p-0 focus:ring-0;
+          }
+          .text {
+            @apply border-none p-4;
+          }
+        }
+        .use-map-btn {
+          @apply flex items-center p-4  bg-primary text-white rounded gap-3 
+          transition-all duration-300 ease-in-out;
+
+          & p {
+            @apply whitespace-nowrap;
+          }
+
+          &:hover {
+            @apply bg-[#281A5188] -translate-y-2;
+          }
+        }
+
+        .card {
+          @apply flex flex-col items-center gap-1 p-6 rounded-lg border border-transparent
+           justify-center transition-all duration-300 ease-in-out;
+
+          &:hover {
+            @apply bg-white cursor-pointer border-[#DBD5EC] shadow-xl -translate-y-2;
+          }
+        }
+      }
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="decorated-bg"></div>
+      <div class="search-modal">
+        <form action="">
+          <div class="form-group">
+            <label for="search"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </label>
+            <input
+              type="text"
+              id="search"
+              placeholder="Search for a part-time job"
+            />
+          </div>
+          <button class="use-map-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"
+              />
+            </svg>
+            <p>Use map</p>
+          </button>
+        </form>
+        <ul class="card-group grid grid-cols-4 mt-8 gap-4">
+          <li class="bg-[#FFECEC] card">
+            <img src="./assets/Frame.svg" alt="" />
+            <p class="text-primary">Furniture</p>
+          </li>
+
+          <li class="bg-[#F7ECFF] card">
+            <img src="./assets/house.svg" alt="" />
+            <p class="text-primary">Property</p>
+          </li>
+
+          <li class="bg-[#ECF0FF] card">
+            <img src="./assets/company.svg" alt="" />
+            <p class="text-primary">Job</p>
+          </li>
+
+          <li class="bg-[#D7F9F3] card">
+            <img src="./assets/plane.svg" alt="" />
+            <p class="text-primary">Travel</p>
+          </li>
+
+          <li class="bg-[#E2FFD4] card">
+            <img src="./assets/Boat.svg" alt="" />
+            <p class="text-primary">Boat</p>
+          </li>
+
+          <li class="bg-[#E2FFD4] card">
+            <img src="./assets/motorbike.svg" alt="" />
+            <p class="text-primary">MC</p>
+          </li>
+
+          <li class="bg-[#FFF3C9] card">
+            <img src="./assets/camera.svg" alt="" />
+            <p class="text-primary">Economy</p>
+          </li>
+
+          <li class="bg-[#FFD9C9] card">
+            <img src="./assets/Frame.svg" alt="" />
+            <p class="text-primary">Holiday</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

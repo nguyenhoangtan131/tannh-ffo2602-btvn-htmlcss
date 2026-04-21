@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League Landing Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .hero-banner img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .header-nav {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .header-nav .logo {
+        max-width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #111;
+      }
+
+      .champion-grid {
+        display: grid;
+        gap: 20px;
+
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 40px;
+      }
+
+      .champ-card {
+        background: #061c25;
+        transition: transform 0.3s ease;
+      }
+
+      .champ-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .champ-card img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 1 / 1.2;
+        object-fit: cover;
+      }
+
+      .champ-name {
+        color: #fff;
+        text-align: center;
+        padding: 15px 5px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .video-section {
+        width: 100%;
+        margin-bottom: 50px;
+        background: #000;
+      }
+
+      .video-section video {
+        width: 100%;
+        display: block;
+        max-height: 600px;
+        object-fit: cover;
+      }
+
+      .footer-bar {
+        background-color: #061c25;
+        padding: 40px 0;
+        color: #fff;
+      }
+
+      .footer-grid {
+        display: grid;
+        align-items: center;
+        gap: 20px;
+
+        grid-template-columns: 1fr auto;
+      }
+
+      .footer-left {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+
+      .footer-right {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0;
+        border: 1px solid #d0a85c;
+      }
+
+      .footer-right input {
+        background: #092c3a;
+        border: none;
+        color: #fff;
+        padding: 12px 20px;
+        min-width: 280px;
+        outline: none;
+      }
+
+      .btn-play {
+        background-color: #ffb400;
+        color: #000;
+        border: none;
+        padding: 12px 30px;
+        font-weight: 800;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .btn-play:hover {
+        background-color: #e6a200;
+      }
+
+      @media (max-width: 1024px) {
+        .champion-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 650px) {
+        .champion-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-right {
+          grid-template-columns: 1fr;
+          border: none;
+          gap: 10px;
+        }
+
+        .footer-right input {
+          border: 1px solid #d0a85c;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero-banner">
+      <img
+        src="./Lab3_LienMinhHuyenThoai (Copy)/image 44.jpg"
+        alt="Hero Banner"
+      />
+    </section>
+
+    <header class="container header-nav">
+      <img src="logo.png" alt="League Logo" class="logo" />
+      <ul class="nav-links">
+        <li>Game</li>
+        <li>Champions</li>
+        <li>News</li>
+        <li>Patch Notes</li>
+        <li>Discover</li>
+        <li>Esports</li>
+        <li>Universe</li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <section class="champion-grid">
+        <div class="champ-card">
+          <img src="./Lab3_LienMinhHuyenThoai (Copy)/image 31.jpg" alt="" />
+          <p>Ahri</p>
+        </div>
+        <div class="champ-card">
+          <img src="./Lab3_LienMinhHuyenThoai (Copy)/Group 3.png" alt="" />
+          <p>Akali</p>
+        </div>
+        <div class="champ-card">
+          <img src="./Lab3_LienMinhHuyenThoai (Copy)/Group 2.png" alt="" />
+          <p>Azir</p>
+        </div>
+        <div class="champ-card">
+          <img src="caitlyn.jpg" alt="" />
+          <p>Caitlyn</p>
+        </div>
+        <div class="champ-card">
+          <img src="darius.jpg" alt="" />
+          <p>Darius</p>
+        </div>
+        <div class="champ-card">
+          <img src="fizz.jpg" alt="" />
+          <p>Fizz</p>
+        </div>
+        <div class="champ-card">
+          <img src="irelia.jpg" alt="" />
+          <p>Irellia</p>
+        </div>
+        <div class="champ-card">
+          <img src="jinx.jpg" alt="" />
+          <p>Jinx</p>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <video controls poster="xayah-rakan-poster.jpg">
+          <source src="your-video.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+      </section>
+    </main>
+
+    <footer class="footer-bar">
+      <div class="container footer-grid">
+        <div class="footer-left">
+          <p>&copy; 2021 All Rights Reserved</p>
+        </div>
+        <div class="footer-right">
+          <input type="email" placeholder="Email Address" />
+          <button class="btn-play">Play For Free</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

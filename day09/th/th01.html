@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#121212",
+              sub: "#545454",
+              hero: "#FFF6FD",
+            },
+            spacing: {
+              128: "32rem",
+            },
+            fontFamily: {
+              sans: ["AeonikTRial", "Poppins", "sans-serif"],
+            },
+          },
+        },
+        plugins: [
+          // tailwind.plugin.lineClamp,
+        ],
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        @font-face {
+          font-family: "AeonikTRial";
+          src: url("../fonts/AeonikTRIAL-Regular.otf") format("opentype");
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "AeonikTRial";
+          src: url("../fonts/AeonikTRIAL-Light.otf") format("opentype");
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        h1 {
+          @apply text-6xl font-normal;
+        }
+        h2 {
+          @apply text-5xl;
+        }
+        h3 {
+          @apply text-3xl;
+        }
+        body {
+          @apply min-h-screen flex flex-col items-center justify-center bg-white;
+        }
+      }
+      @layer components {
+        .action-group {
+          @apply flex gap-8;
+          @apply transition-colors duration-300 ease-in-out;
+
+          & a {
+            @apply block relative text-2xl font-light text-sub;
+
+            &:hover {
+              @apply text-primary font-normal;
+              transform: scale(1.15);
+            }
+
+            &::before {
+              content: attr(data-text);
+              @apply block h-0;
+            }
+
+            &::after {
+              @apply block content-[''] absolute left-0 bottom-0 h-[2px] bg-primary w-0 rounded;
+              @apply transition-all duration-300 ease-in-out;
+            }
+
+            &:hover::after {
+              @apply w-full;
+            }
+          }
+        }
+
+        .icon-group {
+          @apply flex items-start gap-5;
+
+          & li {
+            @apply flex justify-center items-center;
+            & svg {
+              @apply w-12 h-12;
+            }
+          }
+        }
+      }
+
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper-except-footer flex flex-col py-12 px-20 gap-24">
+      <header>
+        <nav class="flex justify-between items-center">
+          <a href="#">
+            <svg class="w-60 h-16">
+              <use href="./icon-svg-th/website-icon.svg"></use>
+            </svg>
+          </a>
+
+          <ul class="action-group">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Spa</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <ul class="icon-group">
+            <li>
+              <a href="#"
+                ><svg><use href="./icon-svg-th/bag-2.svg"></use></svg
+              ></a>
+            </li>
+
+            <li>
+              <a href="#"
+                ><svg><use href="./icon-svg-th/heart-nav.svg"></use></svg
+              ></a>
+            </li>
+
+            <li>
+              <a href="#"
+                ><svg><use href="./icon-svg-th/user-icon.svg"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section
+        class="hero-banner-section mt-[-50px] flex items-center bg-hero justify-between"
+      >
+        <div class="quote-group">
+          <div class="quote-text">
+            <h1>Glow Beyond</h1>
+            <img src="../th1-icons/grow-beyond-illustration.png" alt="" />
+            <h1>Expectations</h1>
+            <p>
+              Clean, effective, and cruelty-free skincare made to deliver
+              visible results
+            </p>
+          </div>
+          <button class="shop-now-btn">
+            Shop now
+            <img src="../th1-icons/send.png" alt="" />
+          </button>
+        </div>
+        <img src="../th1-imgs/Group-product.png" alt="" />
+      </section>
+
+      <section class="product-section">
+        <div class="product-view">
+          <h2>Discover Our Best-Sellers</h2>
+          <p>View All</p>
+        </div>
+
+        <ul class="product-list">
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Best Seller</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img
+                src="../th1-imgs/PHOTO-2024-09-23-17-29-14-removebg-preview 1(1).png"
+                alt=""
+              />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">X5 Extreme Body Lotion</h3>
+                <div class="price-group">
+                  <div class="old-price">₦35,000</div>
+                  <div class="new-price">₦35,000</div>
+                </div>
+              </div>
+
+              <button class="add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Refined</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img src="../th1-imgs/IMG_2207-removebg-preview 1.png" alt="" />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">AHA Face Toner</h3>
+                <div class="price-group">
+                  <div class="old-price">₦75,000</div>
+                  <div class="new-price">₦60,000</div>
+                </div>
+              </div>
+
+              <button class="Add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Top</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img src="../th1-imgs/image 20(1).png" alt="" />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">Anti Stretchmark Oil</h3>
+                <div class="price-group">
+                  <div class="old-price">₦75,000</div>
+                  <div class="new-price">₦70,000</div>
+                </div>
+              </div>
+
+              <button class="Add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Best Seller</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img src="../th1-imgs/image 18.png" alt="" />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">Acne Serum</h3>
+                <div class="price-group">
+                  <div class="old-price">₦35,000</div>
+                  <div class="new-price">₦35,000</div>
+                </div>
+              </div>
+
+              <button class="Add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Best Seller</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img src="../th1-imgs/image 14(1).png" alt="" />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">Luminous Body Lotion</h3>
+                <div class="price-group">
+                  <div class="old-price">₦35,000</div>
+                  <div class="new-price">₦35,000</div>
+                </div>
+              </div>
+
+              <button class="Add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+
+          <li class="product">
+            <div class="body-product">
+              <div class="advertise-container">
+                <div class="advertise">
+                  <p class="popular-type">Best Seller</p>
+                  <img src="../th1-icons/★★★★★.png" alt="" />
+                  <img src="../th1-icons/Frame 6281.png" alt="" />
+                </div>
+              </div>
+              <img src="../th1-imgs/image.png" alt="" />
+            </div>
+
+            <div class="footer-product">
+              <div class="product-description">
+                <h3 class="product-title">X5 Extreme Body Lotion</h3>
+                <div class="price-group">
+                  <div class="old-price">₦35,000</div>
+                  <div class="new-price">₦35,000</div>
+                </div>
+              </div>
+
+              <button class="Add-to-cart-btn">
+                Add to cart
+                <img src="../th1-icons/bag-2.png" alt="" />
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="guide-blog-section">
+        <h2>Your Guide to Radiant Skin</h2>
+        <h3>5 mistakes that might be hurting your skin</h3>
+        <p>
+          Your skin care routine plays a crucial role in maintaining healthy,
+          radiant skin. However, some common habits might be doing more harm
+          than good. Here are 5 mistakes to avoid: 1. Overwashing your face
+          Washing too often or using harsh cleansers can strip... Continue
+          Reading
+        </p>
+        <button class="read-blog-btn">
+          <p>Read More Blog Post</p>
+          <img src="../th1-icons/send.png" alt="" />
+        </button>
+      </section>
+    </div>
+
+    <footer>
+      <img src="../th1-icons/tragleam.png" alt="" />
+
+      <ul class="footer-action-list">
+        <li class="column-name">Quick link</li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul class="footer-action-list">
+        <li class="Column-name">Company</li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+
+      <div class="email-wrapper">
+        <p>Be the first to get notification about our upcoming event</p>
+        <form type="email">
+          <input type="email" placeholder="email" />
+          <button class="submit-btn">Submit</button>
+        </form>
+      </div>
+
+      <hr />
+      <p>© 2024, Xtragleam Skincare. All Right Reserved</p>
+    </footer>
+  </body>
+</html>

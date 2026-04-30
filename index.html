@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
     <title>Document</title>
-    <style>
+    <style type="text/tailwindcss">
       table,
       tr,
       td,
@@ -16,10 +17,32 @@
         padding: 8px 12px;
         text-align: center;
       }
+      @layer base {
+        & body {
+          @apply flex items-center min-h-screen flex-col justify-center;
+        }
+      }
+
+      @layer components {
+        & tbody {
+          & tr {
+            & td:nth-of-type(2) {
+              @apply text-blue-600;
+            }
+          }
+        }
+
+        & td > a {
+          @apply relative;
+          &:not(:last-of-type)::after {
+            @apply absolute content-[''] w-[2px] h-5 top-0 right-[-4px] bg-black;
+          }
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Nguyễn Hoàng Tân</h1>
+    <h1 class="font-bold">Nguyễn Hoàng Tân</h1>
     <table>
       <thead>
         <tr>
@@ -89,7 +112,6 @@
             <a href="./jira/baitapjira/f3-12-v1.html">Landing Page</a>
           </td>
           <td></td>
-          <td></td>
         </tr>
 
         <tr>
@@ -98,15 +120,23 @@
             <a href="./kiemtra/kiemtra_midterm/kiemtra.html">Kiểm tra</a>
           </td>
           <td></td>
-          <td></td>
         </tr>
 
         <tr>
-          <td>Day 14</td>
+          <td>JBase</td>
           <td>
-            <a href="./Day14/index.html">Tính thuế</a>
+            <a href="./JBase/html/ex01.html">01.Tính BMI</a>
+            <a href="./JBase/html/ex02.html">02.Hoán vị 2 số</a>
+            <a href="./JBase/html/ex03.html">03.Sắp xếp 3 số</a>
+            <a href="./JBase/html/ex04.html">04.Kiểm tra tam giác</a>
+            <a href="./JBase/html/ex05.html">05.Số chính phương</a>
+            <a href="./JBase/html/ex06.html">06.Số Nguyên tố</a>
+            <a href="./JBase/html/ex07.html">07.Số lớn nhất</a>
+            <a href="./JBase/html/ex08.html">08.Số lớn nhất</a>
+            <a href="./JBase/html/ex09.html">09.Tính tiền Taxi</a>
+            <a href="./JBase/html/ex10.html">10.Tính tiền điện</a>
+            <a href="./Day14/index.html">11.Tính thuế</a>
           </td>
-          <td></td>
           <td></td>
         </tr>
       </tbody>
